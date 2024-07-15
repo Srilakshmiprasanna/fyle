@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.header, .description, .services {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header {
+    align-items: flex-start;
+    
+}
+.header h4 {
+    color: red;
+    margin-right: 20px;
+}
+.header h1 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+section .header{
+    text-align: center; justify-content: center;
+}
+.description p {
+    line-height: 1.6;
+}
+.services {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    
+}
+.service-container {
+    display: flex;
+    transition: transform 0.5s ease; 
+    
+}
+.service-item {
+    flex: 0 0 25%; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;    
+    margin-right: 20px; 
+}
+.service-item img {
+    width: 100%;
+    height: 100%;
+    
+}
+.service-item-content {
+    padding: 100px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.service-item-content h3 {
+    margin-bottom: 10px;
+}
+.service-item-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.service-item-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.dots { 
+    margin-top: 20px;
+    justify-content: left;
+    display: flex;
+}
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dot.active {
+    background-color: red; 
+}
+/*project*/
+.container {
+    display: flex;
+}
+.image-container img {
+    width: 700px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+.content {
+    margin-left: 20px;
+    height: 700px;
+}
+.content div {
+    margin-bottom: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 133px;
+}
+.content div:hover {
+    background-color: #f0f0f0;
+}
+.content .active {
+    background-color: #ff4c4c;
+    color: white;
+}
+/*growth*/
+.containers {
+    text-align: center;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card i {
+    font-size: 40px;
+    color: #ff4c4c;
+    margin-bottom: 10px;
+}
+.card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+.card p {
+    margin: 0;
+    color: gray;
+}
+.highlight {
+    color: #ff4c4c;
+}
+.sto, .service-item{
+    background-color: red; color:white; display: flex; justify-content: center; align-items: center; width: 100%; margin: 0.5%;
+}

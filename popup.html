@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop-up form</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function redirectToPage() {
+            window.location.href = 'whatwedo.html';
+        }
+        
+    </script>
+    
+</head>
+<body>
+    <div class="field-holder">
+        <h2>Talk to us</h2>
+        <form onsubmit="redirectToPage(); return false; " action="https://api.getform.io/v1/forms/bwngqloa" method="POST" enctype="multipart/form-data">
+            <label>
+                <input type="email" name="email" placeholder=" " autocomplete="email" required>
+                <span>Work email</span>
+            </label>
+            <div class="name-fields">
+                <label>
+                    <input type="text" name="firstname"placeholder=" " autocomplete="given-name" required>
+                    <span>First Name</span>
+                </label>
+                <label>
+                    <input type="text" name="lastname" placeholder=" " autocomplete="family-name" required>
+                    <span>Last Name</span>
+                </label>
+            </div>
+            <div class="custom-checkbox-container">
+                <label class="custom-checkbox">
+                    <input type="checkbox" name ="terms" placeholder="Contact Us"  value="yes" required>
+                    <span class="checkmark"></span>
+                </label>
+                <span>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;I agree to Fyle's terms and conditions, and provide consent to send me &nbsp;&nbsp;&nbsp;communication.</span>
+            </div>
+            <br><br>
+            <button type="submit">Contact Us</button>
+        </form>
+        
+    </div>
+</body>
+</html>

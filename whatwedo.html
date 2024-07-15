@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What we do</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h4 class="highlight">WHAT WE DO</h4>
+            <h1><b>SERVICES PROVIDE<br>FOR YOU</b></h1>
+        </div>
+        <div class="description">
+            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque<br>
+            vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus<br>
+            feugiat et fermentum.</p>
+        </div>
+    </div>
+    <div class="services">
+        <div class="service-container">
+
+            <div class="service-item">
+                <img src="do1.png" alt="Service Image 1">
+            </div>
+            <div class="service-item">
+                <img src="do2.png" alt="Service Image 2">
+            </div>
+            <div class="sto">
+                <div class="service-item">
+                    <div class="service-item-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                        <a href="https://fylehq.com" target="_blank" class="read-more">READ MORE</a>                        
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="do3.png" alt="Service Image 3">
+            </div>   
+            <div class="service-item">
+                <img src="do4.webp" alt="Service Image 4">
+            </div>
+            <div class="service-item">
+                <img src="do5.jpg" alt="Service Image 5">
+            </div>      
+        </div>
+    </div>
+    <div class="dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    <!--WHY WE ARE BEST-->
+    </div>
+    <section>
+    <div class="header">
+        <div>
+            <h4 class="highlight">OUR PROJECT</h4>
+            <h1><b>WHY WE ARE BEST</b></h1>
+        </div>
+    </div>
+    </section>
+    <div class="container">
+        <div class="image-container">
+            <img id="mainImage" src="pro1.png" alt="Main Image">
+        </div>
+        <div class="content">
+            <div class="item active" data-image="pro1.png">
+                <h3>Better Strategy & Quality</h3>
+                <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="item" data-image="pro2.jpg">
+                <h3>Genderless Kei – Japan’s Hot</h3>
+                <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="item" data-image="pro3.png">
+                <h3>Genderless Kei – Japan’s Hot</h3>
+                <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+        </div>
+    </div>
+    <!--GROWTH-->
+    <div class="containers">
+        <h2 class="highlight">EXPERTS GROWTH</h2>
+        <h1>OUR COMPANY GROWTH</h1>
+        <div class="cards">
+            <div class="card">
+                <i class="highlight">❤️</i>
+                <h3>199 +</h3>
+                <p>Statified Customers</p>
+            </div>
+            <div class="card">
+                <i class="highlight">⏰</i>
+                <h3>1591+</h3>
+                <p>Days Of Operation</p>
+            </div>
+            <div class="card">
+                <i class="highlight">✔️</i>
+                <h3>283 +</h3>
+                <p>Complete Project</p>
+            </div>
+            <div class="card">
+                <i class="highlight">🏆</i>
+                <h3>75+</h3>
+                <p>Win Awards</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //our project
+        const items = document.querySelectorAll('.content .item');
+        const mainImage = document.getElementById('mainImage');
+
+        items.forEach(item => {
+            item.addEventListener('click', function() {
+                items.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    </script>
+    
+    <script>
+        const serviceContainer = document.querySelector('.service-container');
+        const dots = document.querySelectorAll('.dot');
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = dot.getAttribute('data-index');
+                updateDots(index);
+                slideTo(index);
+            });
+        });
+
+        function updateDots(index) {
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            dots[index].classList.add('active');
+        }
+
+        function slideTo(index) {
+            const offset = index * -100 / 4;
+            serviceContainer.style.transform = `translateX(${offset}%)`;
+        }
+       updateDots(0);
+    </script>
+</body>
+</html>
